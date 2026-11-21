@@ -1,0 +1,18 @@
+[package]
+name = "wiring-diagram-builder"
+version = "0.1.0"
+description = "Wiring Diagram Builder App"
+authors = ["afouche0806"]
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "1", features = [] }
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tauri = { version = "1", features = ["protocol-all"] }
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
